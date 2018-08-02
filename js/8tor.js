@@ -1,5 +1,5 @@
-let Bittor = (function () {
-console.log("hola");
+let bittor = (function () {
+//console.log("hola");
 
 const config = {
     canvas: document.getElementsByTagName("canvas"),
@@ -7,12 +7,18 @@ const config = {
 };
 
     function init() {  
-        console.log(config.canvas);
-        
-
+        //console.log(config.canvas);
+        draw();
     };
     function draw() {  
+        var context = config.context;
+        context.fillStyle='red';
+        context.fillRect(20,20,20,20);
         
+        
+    };
+    function clear(){
+        config.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     };
 
     return {
@@ -20,4 +26,4 @@ const config = {
     }
 
 })();
-Bittor.init();
+bittor.init();
